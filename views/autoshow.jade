@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  h2= auto[n][1]
+  table(class='auto')
+   thead
+     tr
+       td ID
+       td Название
+       td Статус
+       td Цена,
+          руб/км
+       td Владелец
+   tr
+     - for (var i=0; i<5; i++) {
+     td 
+       span= auto[n][i]
+     - }
+     
+  p(class='center') &nbsp;
+  p( class='center')
+    a(href='/')Список 
+

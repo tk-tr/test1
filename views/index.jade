@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+  - var n=3;
+  table(class='auto')
+    thead
+      tr
+        td ID
+        td Название
+        td Статус
+        td Функции
+    - for (var i=0; i<auto.length; i++) {
+      tr
+        td 
+          span= auto[i][0]
+        td
+          span= auto[i][1]
+        td
+          span= auto[i][2]
+        td 
+          a(href='/?n=#{i}') Подробнее
+    - }
+      
+
